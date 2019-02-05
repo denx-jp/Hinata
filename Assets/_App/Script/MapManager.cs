@@ -17,7 +17,7 @@ public class MapManager : MonoBehaviour
     public GameObject floorBlock_Goal;
     public GameObject wallBlock;
 
-    public string path;
+    public string mapCSVfileName;
 
     // 敵データ格納用の配列データ(とりあえず初期値はnull値)
     private int[,] stageArray;
@@ -110,7 +110,8 @@ public class MapManager : MonoBehaviour
 
     void Awake()
     {
-        readCSVData(Application.dataPath + path, ref this.sdataArrays);
+        var filePath = Application.streamingAssetsPath + "/Map/" + mapCSVfileName;
+        readCSVData(filePath, ref this.sdataArrays);
         convert2DArrayType(ref this.sdataArrays, ref this.stageArray, this.height, this.width);
     }
 
