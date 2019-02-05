@@ -5,21 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Dice/scenes/Demo/demo.unity
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/title.unity
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/pictionary.unity
-    guid: 00000000000000000000000000000000
+    path: Assets/_App/Scene/title.unity
+    guid: b6d7cb3308743f8498cfc9e729f1a69d
   - enabled: 1
-    path: Assets/pictionary2.unity
-    guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/pictionary3.unity
-    guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/pictionary_tutorial.unity
-    guid: 00000000000000000000000000000000
+    path: Assets/_App/Scene/Stage_Scene/tutorial_stage.unity
+    guid: d6d45cc78c385d74ca039b7aa8743662
+  m_configObjects: {}

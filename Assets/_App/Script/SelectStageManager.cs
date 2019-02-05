@@ -18,7 +18,7 @@ public class SelectStageManager : MonoBehaviour
     }
     public void SelectTutorial()
     {
-        SceneManager.LoadScene("Scene/Stage_Scene/tutorial_stage");
+        SceneManager.LoadScene("Tutorial");
     }
     public void SelectNormal()
     {
