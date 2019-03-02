@@ -22,10 +22,10 @@ public class SelectStageManager : MonoBehaviour
     }
     public void SelectNormal()
     {
-        SceneManager.LoadScene("Scene/Stage_Scene/normal_stage");
+        SceneManager.LoadScene("Normal");
     }
     public void SelectHard()
     {
-        SceneManager.LoadScene("Scene/Stage_Scene/hard_stage");
+        SceneManager.LoadScene("Hard");
     }
 }
