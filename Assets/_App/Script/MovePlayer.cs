@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class MovePlayer : MonoBehaviour
 {
@@ -29,10 +30,21 @@ public class MovePlayer : MonoBehaviour
         playerpos.Add("Player5", new[] { 9, 3 });
         int playerPositionX = playerpos[name][0];
         int playerPositionZ = playerpos[name][1];
-        UpdatePlayerPosition(0, 0, name);
-        Player_fig.transform.position = new Vector3((playerPositionX) * 10, 0, (playerPositionZ) * 10);
-       
 
+        var sceneName = SceneManager.GetActiveScene().name;
+        if (sceneName == "Tutorial")
+        {
+            UpdatePlayerPosition(0, 0, name);
+        }
+        else if (sceneName == "Normal")
+        {
+            UpdatePlayerPosition(-3, 2, name);
+        }
+        else if (sceneName == "Hard")
+        {
+            UpdatePlayerPosition(-6, 1, name);
+        }
+        Player_fig.transform.position = new Vector3((playerPositionX) * 10, 0, (playerPositionZ) * 10);
     }
     // Use this for initialization
     void Start()
